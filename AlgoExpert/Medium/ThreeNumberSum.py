@@ -61,9 +61,11 @@ def threeNumberSum_twoLoops_hash(array: List[int], targetSum: int):
     return sorted(result)
 
 # ---------------------- memory O(N), time O(N**2) -------------------------
+
+
 def threeNumberSum_twoPointers(array: List[int], targetSum: int):
-    array.sort() #O(n log n)
-    result = [] # memory O(N)
+    array.sort()  # O(n log n)
+    result = []  # memory O(N)
     for i, value in enumerate(array):
         left_pointer = i+1
         rigth_pointer = len(array) - 1
@@ -80,8 +82,9 @@ def threeNumberSum_twoPointers(array: List[int], targetSum: int):
             elif cumulative_sum > targetSum:
                 # We move the right_pointer to the left because the number is guaranteed to be lower
                 rigth_pointer -= 1
-    
-    return result  
+
+    return result
+
 
 if __name__ == '__main__':
     array = [12, 3, 1, 2, -6, 5, -8, 6]
