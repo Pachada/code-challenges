@@ -19,7 +19,30 @@ Sample Output
 
 from typing import List
 
+# O(n) time | O(1) space
+def longestPeak(array: List[int]):
+    longest_peak = 0
+    for i in range(1, len(array)-1):
+        if array[i] > array[i-1] and array[i] > array[i+1]:
+            peak_length = 3  # A peak is formed by at least 3 values
+            #left
+            for j in range(i-1, 0, -1):
+                if array[j] <= array[j - 1]:
+                    break
+                peak_length += 1
+            # rigth
+            for k in range(i+1, len(array)-1):
+                if array[k + 1] >= array[k]:
+                    break
+                peak_length += 1
 
-def longestPeak(array:List[int]):
-    # TODO
-    ...
+            longest_peak = max(peak_length, longest_peak)
+
+    return longest_peak
+
+
+if __name__ == "__main__":
+    array = [1, 1, 3, 2, 1]
+    print(longestPeak(array))
+    array2 = [5, 4, 3, 2, 1, 2, 10, 12, -3, 5, 6, 7, 10]
+    print(longestPeak(array2))
