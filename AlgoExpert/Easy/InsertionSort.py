@@ -15,7 +15,7 @@ Sample Output
 
 from typing import List
 
-
+# O(n**2) time | O(1) space
 def insertionSort(array: List[int])-> List[int]:
     for i in range(1, len(array)):
         j = i

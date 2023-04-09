@@ -12,6 +12,7 @@ Sample Output
 
 from typing import List
 
+# O(n**2) time | O(1) space
 def selectionSort(array:List[int]) -> List[int]:
     i = 0
     while i < len(array):
