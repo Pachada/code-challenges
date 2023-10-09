@@ -19,14 +19,14 @@ from typing import List
 
 # O(nLogN) time | O(1) scpae
 def nonConstructibleChange(coins: List[int]) -> int:
-    coins.sort()  # O(N log N)
-    change = 0
-    for coin in coins:
-        if coin > change+1:  # We cant create change+1
-            return change+1
-        change += coin
+    coins.sort()  # Sort the coins list in ascending order. O(N log N)
+    change = 0  # Initialize the change variable to 0.
+    for coin in coins:  # Iterate through each coin in the sorted list.
+        if coin > change+1:  # If the current coin is greater than change + 1,
+            return change+1  # return change + 1 as the minimum amount of change that cannot be created.
+        change += coin  # Otherwise, update the change variable by adding the current coin to it.
+    return change+1  # If the loop completes without returning, return change + 1 as the minimum amount of change that cannot be created.
 
-    return change+1
 
 
 if __name__ == "__main__":
