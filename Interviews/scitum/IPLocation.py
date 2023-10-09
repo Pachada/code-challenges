@@ -1,3 +1,26 @@
+"""
+Problema 2 (2 días)
+
+Existen diferentes bases de datos de acceso público donde se registra la geolocalización de de
+direcciones IP, sin embargo, no todas concuerdan en los datos que devuelven.
+
+Se requiere determinar de forma automática la ciudad origen de una dirección IP después de
+consultar diferentes plataformas, en caso de que exista discrepancia en la información, indicar como
+“probable” la ciudad origen que más veces coincidió en la consulta.
+Ejemplo de resultado:
+Cuando las consultas coinciden:
+Ciudad origen: Tokyo
+Cuando las consultas discrepan:
+Probable Ciudad Origen: Madrid
+Se pueden hacer uso de las siguientes plataformas para consulta (al menos usar 2):
+• https://geolocation-db.com/json/{DIRECCION_IP}&position=true
+• https://ipinfo.io/{DIRECCION_IP}/json
+• http://api.hostip.info/get_json.php?ip={DIRECCION_IP}&position=true
+• https://json.geoiplookup.io/{DIRECCION_IP}
+• https://freegeoip.app/json/{DIRECCION_IP}
+• http://ip-api.com/json/{DIRECCION_IP}
+"""
+
 import asyncio
 import aiohttp
 import random
