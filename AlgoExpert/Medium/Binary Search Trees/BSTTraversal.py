@@ -23,6 +23,7 @@ postOrderTraverse: [1, 2, 5, 5, 22, 15, 10] // where the array is the input arra
 
 # O(n) time | O(n) space
 def inOrderTraverse(tree, array):
+    # from the lowest value to the highest
     if not tree:
         return
     inOrderTraverse(tree.left, array)
