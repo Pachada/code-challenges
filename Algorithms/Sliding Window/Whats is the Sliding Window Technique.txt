@@ -1,0 +1,17 @@
+What is the Sliding Window Technique?
+The sliding window technique is an algorithmic paradigm that involves creating a 
+"window" of fixed size and sliding it over the data structure (usually an array or string) 
+to find a particular substructure, such as a substring or subarray that satisfies certain conditions. 
+This technique is useful for solving problems that involve contiguous sequences with specific properties.
+
+The window size can either be fixed or variable depending on the problem. 
+You generally start with the window at the leftmost side and move it toward the rightmost side, 
+updating the solution and the window's limits as you go.
+
+Key Elements
+Window Start & End: Two pointers to represent the start and end of the window.
+Window Size: The size of the window, which can be fixed or variable.
+Conditions: Criteria that the elements within the window must satisfy.
+Advantages
+Efficiency: Often reduces the time complexity to O(N).
+Simplicity: Easier to implement and understand.
